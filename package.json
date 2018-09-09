@@ -1,0 +1,41 @@
+{
+  "name": "back_bone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "license": "MIT",
+    "webpack-dev-server": "webpack-dev-server",
+    "webpack": "webpack",
+    "debug": "node --inspect --debug-brk ./node_modules/webpack/bin/webpack.js",
+    "dev": "npm run webpack-dev-server -- --env.mode development --hot",
+    "prod": "npm run webpack -- --env.mode production",
+    "prod:ts": "npm run prod -- --env.presets typescript",
+    "prod:analyze": "npm run prod -- --env.presets analyze",
+    "prod:compression": "npm run prod -- --env.presets compression",
+    "dev:debug": "npm run debug -- --env.mode development",
+    "prod:debubg": "npm run debug -- --env.mode production"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^2.0.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "style-loader": "^0.23.0",
+    "ts-loader": "^5.0.0",
+    "typescript": "^3.1.0-dev.20180907",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.17.1",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0"
+  }
+}
